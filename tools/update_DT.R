@@ -285,7 +285,7 @@ local({
 
 # update plugins whose dependency is only one js file
 local({
-  plugins = names(DT:::available_plugins())
+  plugins = names(DT2:::available_plugins())
   lapply(plugins, function(plugin) {
     copy_js_css_swf(
       dld_plugin_path(plugin),
