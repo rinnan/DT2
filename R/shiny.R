@@ -25,7 +25,7 @@
 dataTableOutput = function(outputId, width = '100%', height = 'auto') {
   htmltools::attachDependencies(
     htmlwidgets::shinyWidgetOutput(
-      outputId, 'datatables', width, height, package = 'DT'
+      outputId, 'datatables', width, height, package = 'DT2'
     ),
     crosstalk::crosstalkLibs(),
     append = TRUE
@@ -106,7 +106,7 @@ renderDataTable = function(
     # in the server mode, we should not store the full data in JSON
     if (server && !is.null(instance[['x']])) {
       if (!is.null(instance$x$crosstalkOptions$group)) {
-        stop("Crosstalk only works with DT client mode: DT::renderDataTable({...}, server=FALSE)")
+        stop("Crosstalk only works with DT client mode: DT2::renderDataTable({...}, server=FALSE)")
       }
 
       origData = instance[['x']][['data']]
@@ -579,7 +579,7 @@ sessionDataURL = function(session, data, id, filter, future) {
     })
 
     jsonArgs = c(list(x = res, dataframe = 'rows'),
-                 getOption('DT.TOJSON_ARGS', getOption('htmlwidgets.TOJSON_ARGS')))
+                 getOption('DT2.TOJSON_ARGS', getOption('htmlwidgets.TOJSON_ARGS')))
     httpResponse(200, 'application/json', enc2utf8(do.call(toJSON, jsonArgs)))
 
   }

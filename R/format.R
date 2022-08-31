@@ -53,7 +53,7 @@ formatColumns = function(table, columns, template, ..., appendTo = c('columnDefs
 #'   the length of \code{columns}.
 #' @export
 #' @examples # !formatR
-#' library(DT)
+#' library(DT2)
 #' m = cbind(matrix(rnorm(120, 1e5, 1e6), 40), runif(40), rnorm(40, 100))
 #' colnames(m) = head(LETTERS, ncol(m))
 #' m
