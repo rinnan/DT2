@@ -1,4 +1,4 @@
-Package: DT
+Package: DT2
 Type: Package
 Title: A Wrapper of the JavaScript Library 'DataTables'
 Version: 0.24.2
