@@ -1,2 +1,2 @@
 library(testit)
-test_pkg('DT')
+test_pkg('DT2')
